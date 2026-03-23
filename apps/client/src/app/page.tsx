@@ -1,11 +1,30 @@
+'use client';
+
 import Image from "next/image";
 
 import { Button } from "@commerce/ui/Button";
+import { useEffect } from "react";
 
 export default function Home() {
+
+  useEffect(() => {
+    const sendHello = async () => {
+      try {
+        const response = await fetch("http://localhost:3002/");
+        const data = await response.json();
+        console.log("Response from server:", data.message);
+      } catch (error) {
+        console.error("Error fetching from server:", error);
+      }
+    }
+
+    sendHello();
+    console.log("Hello from the client app!");
+  }, []);
+
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <Button appName="NExt js DEBIL">DEBIL</Button>
+      <Button appName="Client">Client</Button>
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
           className="dark:invert"

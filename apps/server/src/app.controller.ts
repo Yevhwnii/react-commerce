@@ -6,7 +6,8 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): string {
+  getHello(): { message: string } {
+    console.log('Received request at / endpoint');
     return this.appService.getHello();
   }
 }

@@ -3,5 +3,6 @@ packages:
   - "packages/*"
 
 allowBuilds:
+  '@nestjs/core': true
   sharp: true
   unrs-resolver: false
