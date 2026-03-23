@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "ask": [
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(*.pem)",
+      "Read(*.key)",
+      "Read(*.p12)",
+      "Read(*.pfx)",
+      "Read(*.cert)",
+      "Read(*.crt)",
+      "Read(**/.ssh/*)",
+      "Read(**/secrets/*)",
+      "Read(**/auth/secrets/*)",
+      "Read(*secret*)",
+      "Read(*credential*)",
+      "Read(*password*)"
+    ]
+  }
+}

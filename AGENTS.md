@@ -28,6 +28,15 @@
 - `@commerce/typescript-config` — extend these in app-level `tsconfig.json` files, do not duplicate settings.
 - `@commerce/eslint-config` — import the right preset (`base`, `next`, or `react-vite`) per app.
 
+## Component & State Patterns
+
+Follow these rules when building any React component in this repo:
+
+@rules/avoid-boolean-props.md
+@rules/explicit-variants.md
+@rules/compound-components.md
+@rules/lift-state.md
+
 ## Code Style
 
 - TypeScript strict mode everywhere.
