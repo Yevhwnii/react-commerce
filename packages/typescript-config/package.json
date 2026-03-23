@@ -1,0 +1,11 @@
+{
+  "name": "@commerce/typescript-config",
+  "version": "0.0.0",
+  "description": "Basic Typescript config setups",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  }
+}

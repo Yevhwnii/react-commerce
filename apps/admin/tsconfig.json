@@ -1,0 +1,15 @@
+{
+  "extends": "@commerce/typescript-config/react-vite.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@commerce/ui/*": ["../../packages/ui/src/*"]
+    },
+    "strictNullChecks": true
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": ["node_modules"]
+}
