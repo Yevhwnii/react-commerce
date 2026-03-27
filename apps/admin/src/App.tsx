@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <Button appName="Admin">Debil</Button>
+      <Button>Debil</Button>
       <section id="center" className="bg-accent">
         <div className="hero"></div>
         <div>

@@ -1,20 +1,16 @@
 "use client";
 
-import { ReactNode } from "react";
+import { forwardRef, ButtonHTMLAttributes } from "react";
+import { Slot } from "radix-ui";
 
-interface ButtonProps {
-  children: ReactNode;
-  className?: string;
-  appName: string;
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  asChild?: boolean;
 }
 
-export const Button = ({ children, className, appName }: ButtonProps) => {
-  return (
-    <button
-      className={className}
-      onClick={() => alert(`Hello from your ${appName} app!`)}
-    >
-      {children}
-    </button>
-  );
-};
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ asChild, ...props }, ref) => {
+    const Comp = asChild ? Slot.Root : "button";
+    return <Comp ref={ref} {...props} />;
+  }
+);
+Button.displayName = "Button";
